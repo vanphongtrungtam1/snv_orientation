@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#073b8c">
+  <meta name="description" content="Thông tin sinh hoạt đầu khóa: lịch học, quy định, thiết bị, kiểm tra, hồ sơ dự thi và thông tin liên hệ.">
+  <title>Thông tin sinh hoạt đầu khóa | CFL - Đại học Cần Thơ</title>
+  <link rel="icon" type="image/png" href="logo-ctu.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress-bar" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Về đầu trang">
+        <span class="brand-logos">
+          <img src="logo-ctu.png" alt="Logo Trung tâm Ngoại ngữ Đại học Cần Thơ">
+          <img src="logo-35.png" alt="Logo kỷ niệm 35 năm Trung tâm Ngoại ngữ">
+        </span>
+        <span class="brand-copy">
+          <strong>Sinh hoạt đầu khóa</strong>
+          <small>Trung tâm Ngoại ngữ · Đại học Cần Thơ</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+        <a href="#course">Khóa học</a>
+        <a href="#schedule">Lịch học</a>
+        <a href="https://docs.google.com/spreadsheets/d/13-0zOsV66lX_NSZyEar04wJAWotySqFz/edit?usp=sharing&amp;ouid=108013953780749906074&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">Lịch học chi tiết</a>
+        <a href="#assessment">Kiểm tra</a>
+        <a href="#documents">Hồ sơ</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="font-button" type="button" data-font="down" aria-label="Giảm cỡ chữ">A−</button>
+        <button class="font-button" type="button" data-font="reset" aria-label="Khôi phục cỡ chữ">A</button>
+        <button class="font-button" type="button" data-font="up" aria-label="Tăng cỡ chữ">A+</button>
+        <button class="menu-button" type="button" id="menuButton" aria-controls="mainNav" aria-expanded="false">
+          <span></span><span></span><span></span>
+          <span class="sr-only">Mở menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Chào mừng học viên</span>
+          <h1>
+            <span>Thông tin</span>
+            <span>sinh hoạt</span>
+            <span>đầu khóa</span>
+          </h1>
+          <p>Tổng hợp lịch học, quy định, thiết bị cần chuẩn bị, các mốc kiểm tra và hướng dẫn hồ sơ dự thi.</p>
+          <div class="hero-actions" aria-label="Liên kết nhanh">
+            <a class="button quick-button quick-course" href="#course">Thông tin chung</a>
+            <a class="button quick-button quick-documents" href="#documents">Hồ sơ thi</a>
+            <a class="button quick-button quick-schedule" href="https://docs.google.com/spreadsheets/d/13-0zOsV66lX_NSZyEar04wJAWotySqFz/edit?usp=sharing&amp;ouid=108013953780749906074&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">Lịch học chi tiết</a>
+            <a class="button quick-button quick-folder" href="https://drive.google.com/drive/folders/1ibFMJ1RBFlWWYuuvFhlQI2vlMHc1YYBi?usp=sharing" target="_blank" rel="noopener noreferrer">Folder lớp học</a>
+          </div>
+          <div class="slogan">
+            <strong>HỌC ĐỀU</strong><i></i><strong>LUYỆN ĐÚNG</strong><i></i><strong>THI ĐẠT</strong>
+          </div>
+        </div>
+
+        <div class="hero-branding reveal">
+          <div class="hero-logo-pair" aria-label="Hai logo chương trình">
+            <div class="hero-logo">
+              <img src="logo-ctu.png" alt="Logo CFL">
+            </div>
+            <div class="hero-logo">
+              <img src="logo-35.png" alt="Logo 35 năm">
+            </div>
+          </div>
+          <div class="countdown-card">
+            <span>Đếm ngược đến ngày thi</span>
+            <div class="countdown" id="countdown">
+              <div><strong id="days">00</strong><small>Ngày</small></div>
+              <div><strong id="hours">00</strong><small>Giờ</small></div>
+              <div><strong id="minutes">00</strong><small>Phút</small></div>
+              <div><strong id="seconds">00</strong><small>Giây</small></div>
+            </div>
+            <p id="countdownNote">07:00 · Thứ Sáu, 20/11/2026</p>
+          </div>
+          <div class="anonymous-actions" aria-label="Hỏi đáp ẩn danh">
+            <a class="anonymous-button anonymous-question" href="https://forms.gle/LgMfZqdRtrpTUHc18" target="_blank" rel="noopener noreferrer">
+              <span class="anonymous-button-icon" aria-hidden="true">?</span>
+              <span><strong>Đặt câu hỏi ẩn danh</strong></span>
+            </a>
+            <a class="anonymous-button anonymous-response" href="https://docs.google.com/spreadsheets/d/1zXcPVR8IleUoNs4re4AbONnUxLp26-KAAyZGfLZfyOA/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <span class="anonymous-button-icon" aria-hidden="true">✓</span>
+              <span><strong>Xem câu trả lời</strong></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="course">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-index">01</span>
+          <div>
+            <p>Thông tin khóa học</p>
+            <h2>Thông tin chung</h2>
+          </div>
+        </div>
+        <div class="card-grid course-grid">
+          <article class="info-card primary-card reveal">
+            <span class="card-label">Khai giảng</span>
+            <h3>18/7/2026</h3>
+            <p>Thứ Bảy</p>
+          </article>
+          <article class="info-card reveal">
+            <span class="card-label">Thời lượng</span>
+            <h3>192 tiết</h3>
+            <p>Chương trình toàn khóa</p>
+          </article>
+          <article class="info-card reveal">
+            <span class="card-label">Số buổi</span>
+            <h3>48 buổi</h3>
+            <p>Học trực tiếp theo lịch</p>
+          </article>
+          <article class="info-card location-card reveal">
+            <span class="card-label">Địa điểm</span>
+            <h3>Phòng 301, Khu 3, Đại học Cần Thơ</h3>
+            <p>Số 1 đường Lý Tự Trọng</p>
+            <button id="copyAddress" type="button">Sao chép địa chỉ</button>
+          </article>
+          <article class="info-card reveal">
+            <span class="card-label">Hình thức học</span>
+            <h3>Học trực tiếp</h3>
+            <p>Theo lịch học cố định</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="schedule">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-index">02</span>
+          <div>
+            <p>Lịch học</p>
+            <h2>Giờ học</h2>
+          </div>
+        </div>
+        <div class="schedule-layout">
+          <div class="schedule-list">
+            <article class="schedule-card reveal">
+              <div class="day-badge"><span>Thứ</span><strong>7</strong></div>
+              <div><span>Buổi sáng</span><h3>08:00 – 11:00</h3></div>
+            </article>
+            <article class="schedule-card reveal">
+              <div class="day-badge"><span>Thứ</span><strong>7</strong></div>
+              <div><span>Buổi chiều</span><h3>13:30 – 16:30</h3></div>
+            </article>
+            <article class="schedule-card reveal">
+              <div class="day-badge red"><span>Chủ</span><strong>Nhật</strong></div>
+              <div><span>Buổi sáng</span><h3>08:00 – 11:00</h3></div>
+            </article>
+          </div>
+          <aside class="notice-card reveal">
+            <span class="notice-kicker">Lưu ý</span>
+            <h3>Đi học đúng giờ và theo dõi thông báo</h3>
+            <ul>
+              <li>Học viên cần đi học đúng giờ.</li>
+              <li>Mọi thay đổi về lịch học sẽ được thông báo qua nhóm Zalo của lớp.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rules">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-index">03</span>
+          <div>
+            <p>Quy định học tập</p>
+            <h2>Chủ động, nghiêm túc và trách nhiệm</h2>
+          </div>
+        </div>
+        <aside class="attendance-alert reveal" role="note" aria-label="Quy định quan trọng về số buổi được phép nghỉ">
+          <div class="attendance-alert-badge" aria-hidden="true">!</div>
+          <div class="attendance-alert-copy">
+            <span>Thông tin quan trọng</span>
+            <h3>Học viên được nghỉ tối đa <strong>8 buổi</strong> trên tổng số <strong>48 buổi</strong></h3>
+            <p>Các buổi nghỉ phải có xin phép theo quy định của lớp. KHÔNG được nghỉ những buổi có BÀI KIỂM TRA và THI MÔ PHỎNG.</p>
+          </div>
+          <div class="attendance-alert-ratio" aria-label="Tám trên bốn mươi tám buổi">
+            <strong>8</strong><span>/48 buổi</span>
+          </div>
+        </aside>
+        <div class="rules-grid">
+          <article class="rule-card reveal"><span>01</span><h3>Đầy đủ và đúng giờ</h3><p>Tham gia học đầy đủ, đúng giờ.</p></article>
+          <article class="rule-card reveal"><span>02</span><h3>Báo vắng trước</h3><p>Báo trước khi vắng học vì công tác hoặc lý do cá nhân với Anh Hưng.</p></article>
+          <article class="rule-card reveal"><span>03</span><h3>Hoàn thành nhiệm vụ</h3><p>Hoàn thành bài tập và nhiệm vụ tự học.</p></article>
+          <article class="rule-card reveal"><span>04</span><h3>Tích cực luyện tập</h3><p>Tích cực tham gia các hoạt động luyện tập.</p></article>
+          <article class="rule-card reveal"><span>05</span><h3>Chuẩn bị thiết bị</h3><p>Mang theo thiết bị học tập khi được yêu cầu.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section equipment-section" id="equipment">
+      <div class="container equipment-layout">
+        <div class="equipment-copy reveal">
+          <span class="section-index light">04</span>
+          <p class="light-kicker">Thiết bị cần chuẩn bị</p>
+          <h2>Sẵn sàng cho mọi hoạt động học tập</h2>
+          <p>Học viên chủ động sạc đầy pin, kiểm tra kết nối và mang thiết bị theo yêu cầu của giáo viên.</p>
+          <div class="equipment-grid">
+            <div>Điện thoại thông minh</div>
+            <div>Máy tính xách tay</div>
+            <div>Tai nghe</div>
+            <div>Bộ sạc thiết bị</div>
+          </div>
+        </div>
+        <div class="purpose-card reveal">
+          <span>Mục đích sử dụng</span>
+          <ol>
+            <li><b>01</b><div><strong>Làm bài luyện tập</strong><p>Thực hiện hoạt động trên nền tảng học tập.</p></div></li>
+            <li><b>02</b><div><strong>Nghe audio</strong><p>Luyện nghe chủ động và tập trung.</p></div></li>
+            <li><b>03</b><div><strong>Thực hành thi trên máy</strong><p>Làm quen giao diện và thao tác thi.</p></div></li>
+            <li><b>04</b><div><strong>Truy cập tài liệu học tập</strong><p>Xem tài liệu, bài tập và thông báo của lớp.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="assessment">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-index">05</span>
+          <div>
+            <p>Kiểm tra và thi mô phỏng</p>
+            <h2>Các mốc chính cần ghi nhớ</h2>
+          </div>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal"><time>02/8/2026</time><div><span>Mốc 01</span><h3>Thu hồ sơ dự thi và Bài kiểm tra số 1</h3></div></article>
+          <article class="timeline-item reveal"><time>23/8/2026</time><div><span>Mốc 02</span><h3>Bài kiểm tra số 2</h3></div></article>
+          <article class="timeline-item reveal"><time>04/10/2026</time><div><span>Mốc 03</span><h3>Thi mô phỏng lần 1</h3></div></article>
+          <article class="timeline-item reveal"><time>08/11/2026</time><div><span>Mốc 04</span><h3>Thi mô phỏng lần 2</h3></div></article>
+          <article class="timeline-item final reveal"><time>20/11/2026</time><div><span>Dự kiến</span><h3>Ngày thi dự kiến</h3></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="documents">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-index">06</span>
+          <div>
+            <p>Hồ sơ dự thi</p>
+            <h2>Chuẩn bị đầy đủ trước ngày 02/8/2026</h2>
+          </div>
+        </div>
+        <div class="documents-layout">
+          <article class="document-card reveal">
+            <span class="card-label">Danh mục hồ sơ</span>
+            <h3>Học viên cần chuẩn bị</h3>
+            <ul class="check-list">
+              <li><i>✓</i><div><strong>Phiếu đăng ký dự thi theo mẫu</strong><p>Điền đầy đủ và chính xác các thông tin.</p></div></li>
+              <li><i>✓</i><div><strong>02 ảnh 4 × 6 cm</strong><p>Ảnh chụp không quá 6 tháng.</p></div></li>
+              <li><i>✓</i><div><strong>01 bản photocopy Căn cước công dân</strong></div></li>
+              <li><i>✓</i><div><strong>Bản photocopy thẻ xác nhận đối tượng</strong><p>Thẻ học sinh, sinh viên, học viên sau đại học, công chức hoặc viên chức của Đại học Cần Thơ, nếu có.</p></div></li>
+              <li><i>✓</i><div><strong>Mang theo bản chính để đối chiếu</strong></div></li>
+            </ul>
+          </article>
+          <aside class="download-card reveal">
+            <span>Biểu mẫu chính thức</span>
+            <h3>Tải phiếu đăng ký dự thi</h3>
+            <p>Truy cập trang biểu mẫu của Trung tâm Đánh giá Năng lực Ngoại ngữ, Đại học Cần Thơ.</p>
+            <a class="button button-yellow" href="https://cfla.ctu.edu.vn/bieu-mau" target="_blank" rel="noopener noreferrer">Mở trang biểu mẫu</a>
+            <small>cfla.ctu.edu.vn/bieu-mau</small>
+          </aside>
+        </div>
+        <article class="notes-card reveal">
+          <span class="card-label">Lưu ý khi nộp hồ sơ</span>
+          <h3>Kiểm tra kỹ trước khi nộp</h3>
+          <div class="notes-grid">
+            <div><b>01</b><p>Kiểm tra chính xác họ tên, ngày sinh và số CCCD.</p></div>
+            <div><b>02</b><p>Ghi đúng số điện thoại và địa chỉ email.</p></div>
+            <div><b>03</b><p>Nộp hồ sơ đúng thời hạn.</p></div>
+            <div><b>04</b><p>Hồ sơ thiếu hoặc sai thông tin có thể không được tiếp nhận.</p></div>
+            <div><b>05</b><p>Theo dõi thông báo chính thức về ngày thi, ca thi và địa điểm thi.</p></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-index">07</span>
+          <div>
+            <p>Kênh thông tin lớp</p>
+            <h2>Thông tin liên hệ</h2>
+          </div>
+        </div>
+        <article class="zalo-banner reveal">
+          <div>
+            <span>Kênh thông tin chính</span>
+            <h3>Nhóm Zalo của lớp</h3>
+            <p>Mọi thay đổi về lịch học và thông báo quan trọng sẽ được cập nhật tại đây.</p>
+          </div>
+          <a href="https://zalo.me/g/q0oi0r5ms38chbc4mhrm" target="_blank" rel="noopener noreferrer">Tham gia nhóm Zalo</a>
+        </article>
+        <div class="contact-grid">
+          <article class="contact-card reveal">
+            <span>Phía Sở Nội vụ</span>
+            <p>Quy chế, chuyên cần</p>
+            <h3>Anh Hưng</h3>
+            <a href="tel:0977111417">0977 111 417</a>
+          </article>
+          <article class="contact-card reveal">
+            <span>Phía CFL</span>
+            <p>Nội dung học tập</p>
+            <h3>Thầy Bảo</h3>
+            <a href="tel:0567755990">0567 755 990</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-section">
+      <div class="container closing-content reveal">
+        <div class="closing-logos">
+          <img src="logo-ctu.png" alt="Logo CFL">
+          <img src="logo-35.png" alt="Logo 35 năm">
+        </div>
+        <p>Thông điệp đầu khóa</p>
+        <h2>HỌC ĐỀU <span>·</span> LUYỆN ĐÚNG <span>·</span> THI ĐẠT</h2>
+        <a class="button button-light" href="#top">Xem lại từ đầu</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>Trung tâm Ngoại ngữ · Đại học Cần Thơ</p>
+      <p>Khai giảng 18/7/2026</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Về đầu trang">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
